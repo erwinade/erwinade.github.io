@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: "Ubuntu", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    height: 100vh;
+    background: url(bg.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-card{
+    width: 400px;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.card-header{
+    background: #2c3a47;
+    padding: 60px 40px;
+}
+
+.pic{
+    display: inline-block;
+    padding: 8px;
+    background: linear-gradient(130deg, #74b9ff,#e66767);
+    margin: auto;
+    border-radius: 50%;
+    background-size: 200% 200%;
+    animation: animated-gradient 2s linear infinite; /* gradient animasi */
+}
+
+@keyframes animated-gradient { /* keyframe animasi agar bergerak */
+    25%{
+        background-position: left bottom;
+    }
+    50%{
+        background-position: right bottom;
+    }
+    75%{
+        background-position: right top;
+    }
+    100%{
+        background-position: left top;
+    }
+    
+}
+
+.pic img{
+    display: block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.name{
+    color: #f2f2f2;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.desc{
+    font-size: 18px;
+    color: #e66767;
+}
+
+.sm{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.sm a{
+    color: #f2f2f2;
+    width: 56px;
+    font-size: 22px;
+    transition: .3s linear;
+}
+
+.sm a:hover{
+    color:#e66767;
+}
+
+.contact-btn{
+    display: inline-block;
+    padding: 12px 50px;
+    color:#e66767;
+    border: 2px solid #e66767;
+    border-radius: 6px;
+    margin-top: 16px;
+    transition: .3s linear;
+}
+
+.contact-btn:hover{
+    background:#e66767;
+    color: #f2f2f2;
+}
+
+.card-footer{
+    background: #f4f4f4;
+    padding: 30px 10px;
+}
+
+.numbers{
+    display: flex;
+    align-items: center;
+}
+
+.item{
+    flex: 1;
+    text-transform: uppercase;
+    font-size: 13px;
+    color: #e66767;
+}
+
+.item span{
+    display: block;
+    color: #2c3a47;
+    font-size: 30px;
+}
+
+.border{
+    width: 1px;
+    height: 30px;
+    background:#bbb;
+}
+
+.skills{
+    width: 100%;
+    max-width: 600px;
+    padding: 0 20px;
+}
+
+.skill-name{
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 12px 0;
+    text-align: left;
+}
+
+.skill-bar{
+    height: 15px;
+    background: #cacaca;
+    border-radius: 8px;
+}
+
+.skill-per{
+    height: 15px;
+    background-color: #0fbcf9;
+    border-radius: 8px;
+    width: 0;
+    transition: 1s linear;
+    position: relative;
+}
+
+.skill-per::before{
+    content: attr(per);
+    position: absolute;
+    padding: 4px 6px;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    font-size: 8px;
+    border-radius: 4px;
+    top: -35px;
+    right: 0;
+    transform: translateX(50%);
+}
+
+.skill-per::after{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #000;
+    top: -16px;
+    right: 0;
+    transform: translateX(50%) rotate(45deg);
+    border-radius: 2px;
+}
+
+hr {
+    border-top: 1px dashed rgb(32, 122, 196);
+    margin-top:10px;
+}
+
+.subtitle {
+    margin-top: 20px;
+    text-align: left;
+    margin-left: 18px;
+    font-size: 16px;
+    font-weight: 600;
+}
